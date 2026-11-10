@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeveloperGuru1989 | Next-Gen Input Tools</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #3b82f6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #10b981;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, #0f172a 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .badge {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .lead {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            background-color: #059669;
+        }
+        section {
+            padding: 5rem 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary);
+            margin: 0.75rem auto 0;
+            border-radius: 2px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+        .features-list {
+            list-style: none;
+        }
+        .features-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .app-highlight {
+            background-color: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+        }
+        .app-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        .app-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        .stat-item strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+        footer {
+            background-color: var(--dark);
+            color: #94a3b8;
+            padding: 4rem 2rem 2rem;
+            font-size: 0.9rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 2rem;
+        }
+        .footer-logo h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .footer-links p {
+            margin-bottom: 0.5rem;
+        }
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            color: white;
+        }
+        .copyright {
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.25rem; }
+            .app-highlight { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <span class="badge">DeveloperGuru1989</span>
+            <h1>Smart Input Solutions</h1>
+            <p class="lead">Breaking communication barriers with advanced voice typing, instant translation, and intuitive customization utilities.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.voice.keyboard.translator" target="_blank" class="cta-btn">View on Google Play</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Our Vision</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Multimodal Input</h3>
+                    <p>We believe expression shouldn't be limited. Our solutions integrate seamless voice typing, fluid gesture-based swipe controls, and precision handwriting recognition layouts into a singular experience.</p>
+                </div>
+                <div class="card">
+                    <h3>Global Translation</h3>
+                    <p>Connecting ecosystems natively. Empowering everyday software with real-time word engineering, active localized dictionary support, and integrated cross-language bridges.</p>
+                </div>
+                <div class="card">
+                    <h3>Intelligent Utilities</h3>
+                    <p>Going beyond standard interfaces by implementing localized audio storage systems alongside secure interactive AI companions built to drive high-performance workflow execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" style="background-color: #f1f5f9;">
+        <div class="container">
+            <h2 class="section-title">Flagship Application</h2>
+            
+            <div class="app-highlight">
+                <div class="app-info">
+                    <span class="badge" style="background-color: var(--primary);">Featured Product</span>
+                    <h2>Voice Keyboard</h2>
+                    <p style="margin: 1rem 0 1.5rem; color: #475569;">A premium, fully customizable operational layout providing comprehensive translation engines, assistive conversation systems, and adaptable physical dynamics for everyday users.</p>
+                    
+                    <ul class="features-list">
+                        <li><strong>Advanced Voice Dictation:</strong> Fluid hands-free speech processing.</li>
+                        <li><strong>Live Language Translators:</strong> Inline translation tools with systemic dictionary lookups.</li>
+                        <li><strong>Custom Interface Engines:</strong> Dynamic height controls and deep graphical theme configurations.</li>
+                        <li><strong>AI Conversation Module:</strong> Interactive assistant framework built for real-time text-based chat.</li>
+                        <li><strong>Built-in Voice Recorder:</strong> Safe local hardware storage access for instant voice memos.</li>
+                    </ul>
+
+                    <div class="app-stats">
+                        <div class="stat-item">
+                            <strong>5K+</strong> Downloads
+                        </div>
+                        <div class="stat-item">
+                            <strong>3+</strong> Content Rating
+                        </div>
+                        <div class="stat-item">
+                            <strong>Android</strong> Platform
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h3>DeveloperGuru1989</h3>
+                    <p>Creating functional utility applications engineered around user accessibility, personalization, and productivity enhancement.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Corporate Registry</h4>
+                    <p><strong>Founder:</strong> Atif Masood</p>
+                    <p><strong>Headquarters:</strong> Haji Pura Lalamusa, Teh. Kharian, Distt. Gujrat</p>
+                    <p>Lalamusa, 50200, Pakistan</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Support & Legal</h4>
